@@ -1,0 +1,214 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  
+  
+   /*Container*/ 
+
+  .flex { 
+    background-color: #659f8f;
+    display: grid;
+    grid-template-columns: 0.4fr 0.2fr 0.2fr;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+  
+    
+  }
+  
+  
+   /*Changed Margin & Font of Main Divs Inside Container*/  
+
+  .sub, .quick, .tech {
+    
+      margin-left: 15%;
+      margin-right: 10%;
+      font-family: Arial, sans-serif;
+      margin-top: 5%;
+      text-transform: capitalize;
+           
+        
+  }
+
+ 
+   /*Changed the font of the Heading for .Quick & .Tech Divs*/
+   
+   .h3 {
+    font-size: small;
+  }
+
+  /*Changed the font of the heading for .Sub Div*/ 
+
+  .h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+   /*Created Spaces in between the lists by using flexbox and changed the direction of the text*/ 
+
+  .list, .h3 {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    font-size: small;
+    margin: 1em;
+    gap: 0.7rem;
+    text-align: left;
+    
+  }
+
+  /*Changed the style of the email section*/ 
+
+  .email {
+    border-radius: 5px;
+    width:  auto;
+    height: 30px;
+    box-shadow: none;
+    border: none;
+    
+    
+  }
+
+  /*Added a hover effect on the button and changed the width and style*/ 
+
+  .button {
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    
+
+  }
+
+  .btn {
+    color: rgb(249, 246, 244);
+    background-color: #d65f1c;
+    font-size: 12px;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: bold;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    
+  }  
+    
+
+  .btn:hover {
+    background-color: #2e564b;
+    
+
+  }
+
+     /*Created a line above the Logo for styling*/ 
+
+     .custom-line {
+      border: none;
+      height: 1px; 
+      background-color: #d65f1c; 
+      width: 200%; 
+      margin-top: 20px;
+      margin-left: 15%;
+    
+    }
+      
+      /*Styled the logo added width and height*/   
+
+      .Logo {
+       display: block;
+       width: 150px;
+       height: 100px;
+       margin-left: 15%;
+
+       }
+
+       /*Media Query for Responsiveness on iphone*/ 
+
+       @media screen and (max-width: 599px) {
+        .flex {
+          display: flex;
+          flex-direction: column; 
+          align-items: flex-start;
+          margin-top: 30px;
+          padding: 20px;
+          width: 75%;
+        }
+      
+        .btn, .email {
+          display: inline;
+          width: 92%;
+          margin-left: 5px;
+          margin-bottom: 7px;
+        }
+      
+        .sub, .quick, .tech, .Logo {
+          margin-left: 15px;
+        }
+      
+        .h2 {
+          font-size: 13px;
+        }
+      
+        .Logo {
+          display: block;
+          width: 120px;
+          height: auto;
+          margin-top: 30px;
+          margin-bottom: 30px;
+          margin-left: 22px;
+        }
+      
+        .custom-line {
+          width: 150%; 
+        }
+      }
+  
+      /*Media Query for Responsiveness on ipads*/ 
+
+      @media screen and (min-width: 600px) and (max-width: 1024px) {
+        .flex {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          justify-content: flex-start;
+          gap: 5px;
+          padding: 30px;
+        }
+      
+        .sub {
+          grid-column: span 3;
+          margin-right: 20px;
+          margin-left: 45px;
+        }
+      
+        .quick {
+          grid-column: span 1;
+        }
+      
+        .tech {
+          grid-column: span 2;
+        }
+      
+        .email {
+          width: 30%;
+        }
+
+        .btn{
+          width: 15%;
+        }
+      
+        .Logo {
+          grid-column: span 3;
+          margin-top: 40px;
+          margin-left: 19%;
+        }
+      }
+      
