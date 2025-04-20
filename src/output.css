@@ -7,11 +7,14 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-red-600: oklch(57.7% 0.245 27.325);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-md: 28rem;
     --container-lg: 32rem;
+    --container-6xl: 72rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
@@ -217,17 +220,32 @@
       max-width: 96rem;
     }
   }
+  .m-1 {
+    margin: calc(var(--spacing) * 1);
+  }
+  .m-1\.5 {
+    margin: calc(var(--spacing) * 1.5);
+  }
   .m-2 {
     margin: calc(var(--spacing) * 2);
   }
   .m-2\.5 {
     margin: calc(var(--spacing) * 2.5);
   }
+  .mx-2 {
+    margin-inline: calc(var(--spacing) * 2);
+  }
   .mx-3 {
     margin-inline: calc(var(--spacing) * 3);
   }
+  .mx-4 {
+    margin-inline: calc(var(--spacing) * 4);
+  }
   .mx-5 {
     margin-inline: calc(var(--spacing) * 5);
+  }
+  .mx-6 {
+    margin-inline: calc(var(--spacing) * 6);
   }
   .mx-7 {
     margin-inline: calc(var(--spacing) * 7);
@@ -244,6 +262,15 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .my-2 {
+    margin-block: calc(var(--spacing) * 2);
+  }
+  .my-3 {
+    margin-block: calc(var(--spacing) * 3);
+  }
+  .my-4 {
+    margin-block: calc(var(--spacing) * 4);
+  }
   .my-5 {
     margin-block: calc(var(--spacing) * 5);
   }
@@ -252,6 +279,9 @@
   }
   .my-7 {
     margin-block: calc(var(--spacing) * 7);
+  }
+  .my-10 {
+    margin-block: calc(var(--spacing) * 10);
   }
   .my-24 {
     margin-block: calc(var(--spacing) * 24);
@@ -336,6 +366,18 @@
   }
   .w-4 {
     width: calc(var(--spacing) * 4);
+  }
+  .w-9 {
+    width: calc(var(--spacing) * 9);
+  }
+  .w-9\/12 {
+    width: calc(9/12 * 100%);
+  }
+  .w-11 {
+    width: calc(var(--spacing) * 11);
+  }
+  .w-11\/12 {
+    width: calc(11/12 * 100%);
   }
   .w-15 {
     width: calc(var(--spacing) * 15);
@@ -618,6 +660,9 @@
   .bg-\[\#659f8f\] {
     background-color: #659f8f;
   }
+  .bg-red-500 {
+    background-color: var(--color-red-500);
+  }
   .bg-red-600 {
     background-color: var(--color-red-600);
   }
@@ -676,6 +721,10 @@
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
@@ -686,6 +735,9 @@
   }
   .text-\[\#313131\] {
     color: #313131;
+  }
+  .text-black {
+    color: var(--color-black);
   }
   .text-white {
     color: var(--color-white);
@@ -813,6 +865,26 @@
   .md\:flex {
     @media (width >= 48rem) {
       display: flex;
+    }
+  }
+  .md\:w-3\/12 {
+    @media (width >= 48rem) {
+      width: calc(3/12 * 100%);
+    }
+  }
+  .md\:w-4\/12 {
+    @media (width >= 48rem) {
+      width: calc(4/12 * 100%);
+    }
+  }
+  .md\:w-6\/12 {
+    @media (width >= 48rem) {
+      width: calc(6/12 * 100%);
+    }
+  }
+  .md\:w-11\/12 {
+    @media (width >= 48rem) {
+      width: calc(11/12 * 100%);
     }
   }
   .md\:w-25 {
@@ -972,6 +1044,16 @@
       width: calc(4/5 * 100%);
     }
   }
+  .lg\:w-6\/12 {
+    @media (width >= 64rem) {
+      width: calc(6/12 * 100%);
+    }
+  }
+  .lg\:w-11\/12 {
+    @media (width >= 64rem) {
+      width: calc(11/12 * 100%);
+    }
+  }
   .lg\:w-25 {
     @media (width >= 64rem) {
       width: calc(var(--spacing) * 25);
@@ -997,9 +1079,44 @@
       width: calc(var(--spacing) * 52);
     }
   }
+  .lg\:w-\[150\%\] {
+    @media (width >= 64rem) {
+      width: 150%;
+    }
+  }
+  .lg\:w-\[200\%\] {
+    @media (width >= 64rem) {
+      width: 200%;
+    }
+  }
+  .lg\:w-\[250\%\] {
+    @media (width >= 64rem) {
+      width: 250%;
+    }
+  }
+  .lg\:w-\[300\%\] {
+    @media (width >= 64rem) {
+      width: 300%;
+    }
+  }
+  .lg\:w-fit {
+    @media (width >= 64rem) {
+      width: fit-content;
+    }
+  }
   .lg\:w-full {
     @media (width >= 64rem) {
       width: 100%;
+    }
+  }
+  .lg\:w-screen {
+    @media (width >= 64rem) {
+      width: 100vw;
+    }
+  }
+  .lg\:max-w-6xl {
+    @media (width >= 64rem) {
+      max-width: var(--container-6xl);
     }
   }
   .lg\:grid-cols-1 {
